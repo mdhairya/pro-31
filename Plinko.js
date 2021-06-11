@@ -1,9 +1,10 @@
 class Plinko {
     constructor(x, y) {
         var options = {
-            restitution: 1,
-            friction: 0,
-            isStatic:true
+            isStatic:true,
+			restitution :1000,
+            friction :0,
+            density:0
         }
         this.r = 10;
         this.body = Bodies.circle(x, y, this.r, options);
@@ -18,7 +19,7 @@ class Plinko {
         push();
         translate(pos.x, pos.y);
         rotate(angle);
-        imageMode(CENTER);
+        // imageMode(CENTER);
         noStroke();
         fill("white");
         ellipseMode(RADIUS);
